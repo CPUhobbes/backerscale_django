@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('count', models.IntegerField(default=0)),
-                ('food', models.OneToOneField(default=1, on_delete=django.db.models.deletion.SET_DEFAULT, to='food.Food')),
+                ('food', models.OneToOneField(default=1, on_delete=django.db.models.deletion.SET_DEFAULT, to='api.Food')),
             ],
         ),
         migrations.CreateModel(
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100, unique=True)),
-                ('foods', models.ForeignKey(default=1, on_delete=django.db.models.deletion.SET_DEFAULT, to='food.Food')),
+                ('foods', models.ForeignKey(default=1, on_delete=django.db.models.deletion.SET_DEFAULT, to='api.Food')),
             ],
         ),
     ]
